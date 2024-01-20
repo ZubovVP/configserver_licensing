@@ -1,16 +1,16 @@
 spring:
-  application:
-    name: config-server
-  profiles:
-    active: native
+    application:
+      name: config-server
+    profiles:
+      active: native
 
-  cloud:
-    config:
-      server:
-      # Локальная конфигурация: это может быть classpath или конкретный каталог в файловой системе.
-        native:
-        # Атрибут classpath заставляет Spring Cloud Config Server искать файлы в папке src/main/resources/config
-          search-locations: classpath:/config
+    cloud:
+      config:
+        server:
+        # Локальная конфигурация: это может быть classpath или конкретный каталог в файловой системе.
+          native:
+          # Атрибут classpath заставляет Spring Cloud Config Server искать файлы в папке src/main/resources/config
+            search-locations: classpath:/config
 
 server:
   port: 8071
