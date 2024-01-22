@@ -1,6 +1,6 @@
 spring:
   application:
-    name: config-server
+    name: configserver_licensing
   profiles:
     active: native
 
