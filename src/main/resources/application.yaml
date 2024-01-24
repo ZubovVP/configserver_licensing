@@ -2,15 +2,18 @@ spring:
   application:
     name: configserver_licensing
   profiles:
-    active: native
+    active: native, git
 
   cloud:
     config:
       server:
         # Локальная конфигурация: это может быть classpath или конкретный каталог в файловой системе.
         native:
-          # Атрибут classpath заставляет Spring Cloud Config Server искать файлы в папке src/main/resources/config
+#          # Атрибут classpath заставляет Spring Cloud Config Server искать файлы в папке src/main/resources/config
           search-locations: classpath:/config
+        git:
+          uri: https://github.com/ZubovVP/config
+        searchPaths: licensingservice
 
 server:
   port: 8071
