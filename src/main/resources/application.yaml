@@ -2,7 +2,7 @@ spring:
   application:
     name: configserver_licensing
   profiles:
-    active: native, git
+    active: native,git
 
   cloud:
     config:
